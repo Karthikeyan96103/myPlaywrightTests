@@ -1,0 +1,10 @@
+{
+  "QA": {
+    "baseUrl1": "https://www.saucedemo.com/",
+    "baseUrl2": "https://www.saucedemowe.com/"
+  },
+  "UAT": {
+    "baseUrl1": "https://www.saucedemo.in/",
+    "baseUrl2": "https://www.saucedemowe.in/"
+  }
+}

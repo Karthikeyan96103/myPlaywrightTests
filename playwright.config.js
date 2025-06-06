@@ -1,6 +1,6 @@
 // @ts-check
 import { defineConfig, devices } from "@playwright/test";
-
+const { test, expect } = require("./myTest/PageObjects/fixtures");
 /**
  * Read environment variables from file.
  * https://github.com/motdotla/dotenv
@@ -13,7 +13,7 @@ import { defineConfig, devices } from "@playwright/test";
  * @see https://playwright.dev/docs/test-configuration
  */
 export default defineConfig({
-   testDir: "./myTest/",
+  testDir: "./myTest/",
   /* Run tests in files in parallel */
   fullyParallel: true,
   /* Fail the build on CI if you accidentally left test.only in the source code. */
@@ -26,6 +26,8 @@ export default defineConfig({
   reporter: "html",
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
+    channel: "chrome",
+    headless: true,
     /* Base URL to use in actions like `await page.goto('/')`. */
     // baseURL: 'http://127.0.0.1:3000',
 
@@ -38,21 +40,20 @@ export default defineConfig({
 
   /* Configure projects for major browsers */
   projects: [
-     {
-       name: "Google Chrome",
-       use: { ...devices["Desktop Chrome"] ,
-       channel: "chrome"},
-     },
+    {
+      name: "Google Chrome",
+      use: { ...devices["Desktop Chrome"], channel: "chrome" },
+    },
 
-//    {
-//      name: "firefox",
-//      use: { ...devices["Desktop Firefox"] },
-//    },
-//
-//    {
-//      name: "webkit",
-//      use: { ...devices["Desktop Safari"] },
-//    },
+    //    {
+    //      name: "firefox",
+    //      use: { ...devices["Desktop Firefox"] },
+    //    },
+    //
+    //    {
+    //      name: "webkit",
+    //      use: { ...devices["Desktop Safari"] },
+    //    },
 
     /* Test against mobile viewports. */
     // {
