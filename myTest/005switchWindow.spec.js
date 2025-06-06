@@ -21,7 +21,7 @@ test("check for switchWindoe", async () => {
   await newWindow.close();
 
   await page.bringToFront();
-  console.log("parent Window Title : ", await page.title());
+//  console.log("parent Window Title : ", await page.title());
 
   await browser.close();
 });
