@@ -19,12 +19,12 @@ test("check for radio button", async () => {
   await radioOne.click();
   const isSelected = await radioOne.isChecked();
   expect(isSelected).toBe(true);
-  console.log("radio1 is selected");
+
 
   const radioTwo = page.locator("xpath = //input[@value='radio2']");
   await radioTwo.click();
   const isSelected2 = await radioTwo.isEnabled();
   expect(isSelected2).toBe(true);
   expect(await radioOne.isChecked()).toBe(false);
-  console.log("radio2 is selected,radio1 is unselected  ");
+//  console.log("radio2 is selected,radio1 is unselected  ");
 });
