@@ -1,0 +1,11 @@
+{
+  "QA": {
+    "baseUrl": "https://www.saucedemo.com/",
+    "dummyUrl": "https://example.com/"
+  },
+  "UAT": {
+    "baseUrl": "https://www.saucedemo.com/",
+    "dummyUrl": "https://exampleq.com/"
+  },
+  "ENV": "QA"
+}
