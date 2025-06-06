@@ -26,5 +26,5 @@ test("check for radio button", async () => {
   const isSelected2 = await radioTwo.isEnabled();
   expect(isSelected2).toBe(true);
   expect(await radioOne.isChecked()).toBe(false);
-//  console.log("radio2 is selected,radio1 is unselected  ");
+  console.log("radio2 is selected,radio1 is unselected  ");
 });
